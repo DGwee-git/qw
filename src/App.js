@@ -39,7 +39,6 @@ function App() {
       <div className="movie-details">
         <h2>{selectedMovie.title}</h2>
         <img src={selectedMovie.image} alt={selectedMovie.title} style={{ width: '300px', height: 'auto' }} />
-        <p><strong>類型:</strong> {selectedMovie.類型}</p>
         <p><strong>推薦分數:</strong> {selectedMovie.推薦分數}</p>
         <p><strong>介紹:</strong> {selectedMovie.description}</p>
         
