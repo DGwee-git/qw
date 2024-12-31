@@ -1,5 +1,72 @@
 import React, { useState } from 'react';
 import './App.css';
+// src/App.js
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import BookingPage from './components/pages/BookingPage';
+// src/App.js 中修改
+import { Link } from 'react-router-dom';  // 添加這行引入
+// src/App.js
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import BookingPage from './components/pages/BookingPage';
+import import BookingPage from 'src/pages/BookingPage';BookingPage from '../pages/BookingPage';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <div className="App">
+            {/* 原有的電影卡片列表 */}
+          </div>
+        } />
+        <Route path="/booking/:movieId" element={<BookingPage />} />
+      </Routes>
+    </Router>
+  );
+}
+
+function App() {
+  return (
+    <div className="App">
+      {movies.map((movie) => (
+        <div key={movie.id} className="movie-card">
+          {/* 現有的電影資訊顯示 */}
+          <img src={movie.image} alt={movie.title} />
+          <h3>{movie.title}</h3>
+          <p>{movie.description}</p>
+          
+          {/* 添加訂票按鈕 */}
+          <Link 
+            to={`/booking/${movie.id}`} 
+            className="booking-button"
+            style={{
+              display: 'inline-block',
+              padding: '8px 16px',
+              backgroundColor: '#007bff',
+              color: 'white',
+              borderRadius: '4px',
+              textDecoration: 'none',
+              marginTop: '10px'
+            }}
+          >
+            立即訂票
+          </Link>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* 保留現有路由 */}
+        <Route path="/booking/:movieId" element={<BookingPage />} />
+      </Routes>
+    </Router>
+  );
+}
 
 const initialMovies = [
   { id: 1, title: '奧術', genre: '科幻', rating: 10, image: '/奧術.jpg', description: '富裕的烏托邦都市皮爾托福和髒亂、充斥威脅的地下城市佐恩間的衝突不斷升級。菲艾和吉茵珂絲被捲著一場由相違背的理念與奧術科技而起的衝突。' },

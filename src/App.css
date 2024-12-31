@@ -66,3 +66,32 @@ h3 {
   border-radius: 8px;
   margin-top: 20px;
 }
+/* 在 App.css 末尾添加 */
+.booking-system {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seat-map {
+  /* 座位圖樣式 */
+}
+
+.booking-summary {
+  /* 訂單摘要樣式 */
+}
+/* src/App.css */
+.booking-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.booking-button:hover {
+  background-color: #0056b3;
+}
